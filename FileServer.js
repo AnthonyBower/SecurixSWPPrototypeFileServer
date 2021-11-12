@@ -2,8 +2,7 @@ var express = require('express'),
     fs = require('fs'),
     cors = require('cors'),
     port = 3030,
-    app = express(),
-    dir = 'C:/Users/Anthony/Documents/SWIS_Files/';
+    app = express();
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
@@ -14,7 +13,7 @@ app.use((req, res, next) => {
 app.get('/files/:filename', (req, res) => {
     //return relevant info from filename
     console.log("Request received for " + req.params.filename + "!");
-    fs.readFile(dir + req.params.filename, (err, data) => {
+    fs.readFile(req.params.filename, (err, data) => {
         if(err) {
             console.log("Error!");
             res.writeHead(404);
