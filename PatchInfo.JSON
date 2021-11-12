@@ -1,0 +1,18 @@
+{
+    "patches" : [
+        {
+            "id" : "1",
+            "name" : "patch1",
+            "software" : "software1",
+            "created_at" : "created1",
+            "download" : "sample1.txt"
+        },
+        {
+            "id" : "2",
+            "name" : "patch2",
+            "software" : "software2",
+            "created_at" : "created2",
+            "download" : "sample2.txt"
+        }
+    ]
+}
